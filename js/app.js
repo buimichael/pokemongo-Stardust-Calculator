@@ -50,7 +50,7 @@ myApp.controller('MyCtrl', ['$scope', function($scope) {
 
   $scope.calculate = function() {
   	$scope.reset();
-    $scope.maxPkmnLvl = parseInt($scope.trnLvl) + 1.5;
+    $scope.maxPkmnLvl = parseFloat($scope.trnLvl) + 1.5;
     if(!$scope.exactPkmnLvl){
       $scope.pkmnLvlMin = Math.min.apply(Math, _.find(dustToLevel, {"dust":parseInt($scope.dustReq)}).pkmnLevel);
       $scope.pkmnLvlMax = Math.max.apply(Math, _.find(dustToLevel, {"dust":parseInt($scope.dustReq)}).pkmnLevel);
@@ -60,11 +60,11 @@ myApp.controller('MyCtrl', ['$scope', function($scope) {
      $scope.minDustReq= calcDust($scope.pkmnLvlMax, $scope.maxPkmnLvl);
       $scope.minCandyReq = calcCandy($scope.pkmnLvlMax, $scope.maxPkmnLvl);
     } else {
-    	$scope.maxDustReq= calcDust(parseInt($scope.exactPkmnLvl), $scope.maxPkmnLvl);
-      $scope.maxCandyReq = calcCandy(parseInt($scope.exactPkmnLvl), $scope.maxPkmnLvl);
+      $scope.maxDustReq= calcDust(parseFloat($scope.exactPkmnLvl), $scope.maxPkmnLvl);
+      $scope.maxCandyReq = calcCandy(parseFloat($scope.exactPkmnLvl), $scope.maxPkmnLvl);
 
-      $scope.minDustReq= calcDust(parseInt($scope.exactPkmnLvl), $scope.maxPkmnLvl);
-      $scope.minCandyReq = calcCandy(parseInt($scope.exactPkmnLvl), $scope.maxPkmnLvl);
+      $scope.minDustReq= calcDust(parseFloat($scope.exactPkmnLvl), $scope.maxPkmnLvl);
+      $scope.minCandyReq = calcCandy(parseFloat($scope.exactPkmnLvl), $scope.maxPkmnLvl);
     }
 		
   };
