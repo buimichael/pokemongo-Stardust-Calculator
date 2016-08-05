@@ -1,6 +1,6 @@
 	<!DOCTYPE html>
 	
-	<html>
+	<html ng-app="myApp">
 	    <head>
 	        <meta charset="utf-8">
 	        <title>Pokémon Go - Stardust Calculator</title>
@@ -12,6 +12,7 @@
 	        <script type="text/javascript" src="js/lodash.min.js"></script>
 			<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	        <script type="text/javascript" src="js/angular.min.js"></script>
+	        <script type="text/javascript" src="js/angular-resource.min.js"></script>
 			<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	        <script type="text/javascript" src="js/app.js"></script>
 
@@ -29,8 +30,7 @@
 	                    </a>
 	                </div>
 	            </div>
-
-		<div ng-controller="myCtrl">
+		<div ng-controller="MyCtrl">
 		<h3>
 		This Pokémon go app calculates the estimated stardust and candy needed for a pokemon to reach maximum strength based on your current level.
 		</h3>

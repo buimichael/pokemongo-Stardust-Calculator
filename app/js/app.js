@@ -1,10 +1,9 @@
 
-var myApp = angular.module('myApp',['myCtrl']);
+var myApp = angular.module('myApp',[]);
 //myApp.directive('myDirective', function() {});
 //myApp.factory('myService', function() {});
 
-var myCtrl = angular.module('myCtrl', []);
-myCtrl.controller('MyCtrl', ['$scope', function ($scope){
+myApp.controller('MyCtrl', ['$scope', function($scope) {
     var  dustToLevel = [
     {"dust":200, "candy":1, "pkmnLevel": [1, 1.5, 2, 2.5]},
     {"dust":400, "candy":1, "pkmnLevel": [3, 3.5, 4, 4.5]},
