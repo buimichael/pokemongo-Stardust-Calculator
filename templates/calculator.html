@@ -1,0 +1,70 @@
+<div ng-controller="MyCtrl">
+<h3>
+This Pokémon go app calculates the estimated stardust and candy needed for a pokemon to reach maximum strength based on your current level.
+</h3>
+  <div class="row form-group">
+    <div class="col-xs-8 myContainer">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="trnLvl">Trainer level:</label>
+              <select class="form-control" name="trnLvl" id="trnLvl" ng-model="trnLvl">
+                <option ng-repeat="option in availableTrnLvls" value="{{option.id}}">{{option.id}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="dustReq">Stardust needed:</label>
+                <select class="form-control" name="dustReq" ng-model="dustReq">
+                <option value="200">200</option>
+                <option value="400">400</option>
+                <option value="600">600</option>
+                <option value="800">800</option>
+                <option value="1000">1000</option>
+                <option value="1300">1300</option>
+                <option value="1600">1600</option>
+                <option value="1900">1900</option>
+                <option value="2200">2200</option>
+                <option value="2500">2500</option>
+                <option value="3000">3000</option>
+                <option value="3500">3500</option>
+                <option value="4000">4000</option>
+                <option value="4500">4500</option>
+                <option value="5000">5000</option>
+                <option value="6000">6000</option>
+                <option value="6000">7000</option>
+                <option value="6000">8000</option>
+                <option value="6000">9000</option>
+                <option value="6000">10000</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="col-xs-7">
+            <div class="form-group">
+              <label for="exactPkmnLvl">(Optional) exact pokemon level:</label>
+              <select class="form-control" name="trnLvl" id="exactPkmnLvl" ng-model="exactPkmnLvl">
+                <option ng-repeat="option in availablePkmnLvls" value="{{option.id}}">{{option.id}}</option>
+              </select>
+            </div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <button type="button" class="btn btn-success" ng-click="calculate()">Calculate</button>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <button type="button" class="btn btn-danger" ng-click="hardReset()">Reset</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  Estimated stardust needed: {{minDustReq}}-{{maxDustReq}}<br/>
+  Estimated candy needed: {{minCandyReq}}-{{maxCandyReq}}<br/>
+</div>
