@@ -7,3 +7,28 @@
 #mainContainer {
     height: calc(100% - 132px);
 }
+
+footer {
+ display: block;
+}
+
+footer {
+   margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+footer p {
+    color: #f2f2f2;
+}
+
+footer a {
+    color: #F2F2F2;
+    text-decoration: underline;
+}
+
+#footer_wrap {
+    background: #212121;
+}
