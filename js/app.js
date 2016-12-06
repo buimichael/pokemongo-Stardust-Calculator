@@ -4,7 +4,7 @@ var myApp = angular.module('myApp',[]);
 //myApp.factory('myService', function() {});
 
 myApp.controller('MyCtrl', ['$scope', function($scope) {
-    var  dustToLevel = [
+    var  oldDustToLevel = [
     {"dust":200, "candy":1, "pkmnLevel": [1, 1.5, 2, 2.5]},
     {"dust":400, "candy":1, "pkmnLevel": [3, 3.5, 4, 4.5]},
     {"dust":600, "candy":1, "pkmnLevel": [5, 5.5, 6, 6.5]},
@@ -27,6 +27,30 @@ myApp.controller('MyCtrl', ['$scope', function($scope) {
     {"dust":10000, "candy":4, "pkmnLevel": [39, 39.5, 40, 40.5]}
   ];
   
+var dustToLevel = [
+    {"dust": 200, "candy": 1, "pkmnLevel": [1, 1.5, 2, 2.5]}, 
+    {"dust": 400, "candy": 1, "pkmnLevel": [3, 3.5, 4, 4.5]}, 
+    {"dust": 600, "candy": 1, "pkmnLevel": [5, 5.5, 6, 6.5]}, 
+    {"dust": 800, "candy": 1, "pkmnLevel": [7, 7.5, 8, 8.5]}, 
+    {"dust": 1000, "candy": 1,"pkmnLevel": [9, 9.5, 10, 10.5]}, 
+    {"dust": 1300,"candy": 2,"pkmnLevel": [11, 11.5, 12, 12.5]}, 
+    {"dust": 1600,"candy": 2,"pkmnLevel": [13, 13.5, 14, 14.5]}, 
+    {"dust": 1900,"candy": 2,"pkmnLevel": [15, 15.5, 16, 16.5]}, 
+    {"dust": 2200,"candy": 2,"pkmnLevel": [17, 17.5, 18, 18.5]}, 
+    {"dust": 2500,"candy": 2,"pkmnLevel": [19, 19.5, 20, 20.5]}, 
+    {"dust": 3000,"candy": 3,"pkmnLevel": [21, 21.5, 22, 22.5]}, 
+    {"dust": 3500, "candy": 3, "pkmnLevel": [23, 23.5, 24, 24.5]}, 
+    {"dust": 4000, "candy": 3,"pkmnLevel": [25, 25.5]}, 
+    {"dust": 4000,"candy": 4,"pkmnLevel": [26, 26.5]}, 
+    {"dust": 4500,"candy": 4,"pkmnLevel": [27, 27.5, 28, 28.5]}, 
+    {"dust": 5000,"candy": 4,"pkmnLevel": [29, 29.5, 30, 30.5]}, 
+    {"dust": 6000,"candy": 6,"pkmnLevel": [31, 31.5, 32, 32.5]}, 
+    {"dust": 7000,"candy": 8,"pkmnLevel": [33, 33.5, 34, 34.5]}, 
+    {"dust": 8000,"candy": 10,"pkmnLevel": [35, 35.5, 36, 36.5]}, 
+    {"dust": 9000,"candy": 12,"pkmnLevel": [37, 37.5, 38, 38.5]}, 
+    {"dust": 10000,"candy": 15,"pkmnLevel": [39, 39.5, 40, 40.5]}
+];	
+	
   $scope.availableTrnLvls = [];
   for(var i=1; i<41; i++){
   	var newObj = {'id':i}
